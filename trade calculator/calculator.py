@@ -195,7 +195,7 @@ def compute_recommendation(ticker):
 
         return {'avg_volume': avg_volume >= 1500000, 'iv30_rv30': iv30_rv30 >= 1.25, 'ts_slope_0_45': ts_slope_0_45 <= -0.00406, 'expected_move': expected_move} #Check that they are in our desired range (see video)
     except Exception as e:
-        raise Exception(f'Error occured processing')
+        raise Exception(f'Error occured processing: {e}')
         
 
     
